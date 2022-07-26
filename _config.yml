@@ -67,3 +67,5 @@ friends:
     { title: "Example Friends", href: "#" },
     { title: "It helps SEO", href: "#" },
   ]
+
+theme: jekyll-theme-cayman
