@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: huxpro@gmail.com
 description: "关于油饼甜甜的博客..."
 keyword: ""
-url: "http://youbingtiantian.github.io" # your host, for absolute URL
+url: "https://youbingtiantian.github.io" # your host, for absolute URL
 baseurl: "/huxblog-boilerplate" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # SNS settings
@@ -50,22 +50,20 @@ ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
 ga_domain: huangxuan.me
 
 # Sidebar settings
-sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "写写代码，做做设计，看看产品。世界那么大，多玩玩看看。"
-sidebar-avatar: /img/avatar-hux.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar: true # 开启侧边栏
+sidebar-about-description: "天意不可违" # 侧边栏的一个描述
+sidebar-avatar: /img/avatar-hux.jpg # 侧边栏的一个头像
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
 featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
 
-# Friends
-friends:
-  [
-    { title: "Hux Blog", href: "http://huangxuan.me" },
-    { title: "Foo", href: "#" },
-    { title: "Bar", href: "#" },
-    { title: "Example Friends", href: "#" },
-    { title: "It helps SEO", href: "#" },
-  ]
-
-theme: jekyll-theme-cayman
+# Friends 友情链接
+# friends:
+#   [
+#     { title: "Hux Blog", href: "http://huangxuan.me" },
+#     { title: "Foo", href: "#" },
+#     { title: "Bar", href: "#" },
+#     { title: "Example Friends", href: "#" },
+#     { title: "It helps SEO", href: "#" },
+#   ]
