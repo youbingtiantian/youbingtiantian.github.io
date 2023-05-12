@@ -86,11 +86,16 @@
     <div class="entry">
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇是关于 vue3 的「reactive」如何实现</p>
-<p>基于源码的结构</p>
+<p>基于源码的结构实现，并不会一步步说明搭建项目的过程…（麻烦</p>
 <h2 id="reative"><a href="#reative" class="headerlink" title="reative"></a>reative</h2><p>下面的截图是 vue 官网对于 reactive 的描述</p>
-<p><img src="/img/Mini-Vue-Reactive/offcialReactive.png"></p>
-<p>由此可以知道「reactive」是返回了一个对象的响应式代理，那么我们首先要做的就是编写一个 function 叫做「reactive」</p>
+<span id="more"></span>
 
+<p><img src="/img/Mini-Vue-Reactive/officialReactive.png"></p>
+<p>由此可以知道「reactive」是返回了一个对象的响应式代理<br>那么我们首先要做的就是编写一个 function 叫做「reactive」</p>
+<h3 id="reactive-ts"><a href="#reactive-ts" class="headerlink" title="reactive.ts"></a>reactive.ts</h3><p>首先创建了「reactive.ts」文件，同时声明了一个「reactive」函数<br>其接收一个当前的 target，就是大家在使用 vue 的 reacvie 时，传入进来的对象<br><img src="/img/Mini-Vue-Reactive/definitionReactive.png"></p>
+<p>我们在「reactive」函数中返回了一个「createReactiveObject」的函数<br>见名知意是创建了一个响应式对象，此函数接收当前 target 对象，同时还接收了一个 handlers 函数，和一个响应式的 weakMap 对象。</p>
+<h3 id="Proxy-amp-amp-WeakMap"><a href="#Proxy-amp-amp-WeakMap" class="headerlink" title="Proxy &amp;&amp; WeakMap"></a>Proxy &amp;&amp; WeakMap</h3><p>大家都知道 vue3 采用 proxy 进行响应式代理，那么我们创建一个响应式对象时，就应该传递当前对象，和一个拥有 setter 和 getter 的这两个拦截方法（至少）的对象进去，第三个参数是一个 weakMap 对象，它的作用是为我们缓存之前已经被代理过的对象，以此避免一些不必要的重复创建，同时 weakMap 对象是一组键值对的集合，其中的键是「弱引用的」，这意味着在没有其他引用存在时垃圾回收能正确进行，原生 WeakMap 的结构是特殊且有效的，其用于映射的 key 只有在其没有被回收时才是有效的。</p>
+<h3 id="待续…"><a href="#待续…" class="headerlink" title="待续…"></a>待续…</h3>
       
     </div>
 
