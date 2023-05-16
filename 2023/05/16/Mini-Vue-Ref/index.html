@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>油 饼 甜 甜 | 火鸡程序员的备忘录</title>
+  <title>Mini-Vue-Ref | 油 饼 甜 甜 | 火鸡程序员的备忘录</title>
 
   
   <meta name="author" content="油饼甜甜">
@@ -14,12 +14,15 @@
   
 
   
+  
+  <meta name="keywords" content="Vue3,响应性,ref">
+  
 
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  
+  <meta property="og:title" content="Mini-Vue-Ref"/>
 
   <meta property="og:site_name" content="油 饼 甜 甜"/>
 
@@ -58,12 +61,11 @@
 </header>
 
     <main class="site-main posts-loop">
-    
-  <article>
+    <article>
 
   
     
-    <h3 class="article-title"><a href="/2023/05/16/Mini-Vue-Ref/"><span>Mini-Vue-Ref</span></a></h3>
+    <h3 class="article-title"><span>Mini-Vue-Ref</span></h3>
     
   
 
@@ -86,7 +88,11 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇是关于 vue3 的「ref」如何实现</p>
 <p>基于源码的结构实现，并不会一步步说明搭建项目的过程…（麻烦</p>
 <h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><p>下面的截图是 vue 官网对于 reactive 的描述</p>
-        
+<span id="more"></span>
+
+<p><img src="/img/Mini-Vue-Ref/officialRef.png"></p>
+<p>由此可以知道「ref」是返回了一个基本数据类型&#x2F;复杂数据类型的响应式数据<br>那么我们首先要做的就是编写一个 function 叫做「ref」</p>
+<h2 id="待续（5-21-前完成"><a href="#待续（5-21-前完成" class="headerlink" title="待续（5.21 前完成"></a>待续（5.21 前完成</h2>
       
     </div>
 
@@ -119,136 +125,16 @@
   </div>
 </article>
 
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2023/05/12/Mini-Vue-Reactive/"><span>Mini-Vue-Reactive</span></a></h3>
-    
   
 
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2023/05/12/Mini-Vue-Reactive/" rel="bookmark">
-        <time class="entry-date published" datetime="2023-05-12T13:00:00.000Z">
-          2023-05-12
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇是关于 vue3 的「reactive」如何实现</p>
-<p>基于源码的结构实现，并不会一步步说明搭建项目的过程…（麻烦</p>
-<h2 id="reative"><a href="#reative" class="headerlink" title="reative"></a>reative</h2><p>下面的截图是 vue 官网对于 reactive 的描述</p>
-        
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-      
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/Vue/">Vue</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/Vue3/">Vue3</a><a href="/tags/reactive/">reactive</a><a href="/tags/响应性/">响应性</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2023/04/30/hello-world/"><span>Hello World</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2023/04/30/hello-world/" rel="bookmark">
-        <time class="entry-date published" datetime="2023-04-30T13:05:47.000Z">
-          2023-04-30
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h2 id="Hello-Blog"><a href="#Hello-Blog" class="headerlink" title="Hello Blog"></a>Hello Blog</h2><p>大家好，这里就是我的个人blog小站</p>
-<p>我可能什么都会放一点（笔记，生活，游戏…</p>
-
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-      
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/记录/">记录</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/Blog/">Blog</a><a href="/tags/Hexo/">Hexo</a><a href="/tags/Github-Page/">Github Page</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
 
 
 
 
-<nav class="pagination">
-  
-  
-</nav>
+
+
+
+
     </main>
 
     <footer class="site-footer">
