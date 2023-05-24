@@ -15,7 +15,7 @@
 
   
   
-  <meta name="keywords" content="Vue3,响应性,ref">
+  <meta name="keywords" content="Vue3,ref,响应性">
   
 
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -102,6 +102,8 @@
 <p><font color=red>在这里我要说明，「ref」方法，本质上对于使用者传递复杂数据类型进入时，会将其在内部调用「reactive」方法进行「proxy」代理，所以本质上来说当传入复杂数据类型时，基本等于是「reactive」帮使用者做了拦截，从而达到目的</font></p>
 <p>在下方我们定义了类的 get 和 set 方法，在 get 中我们调用了收集依赖，传入 this 本身，在其中我们进行了依赖的收集，将 dep 传入其中，如果没有 dep 则创建 dep <font>关于「activeEffect」、「trackEffects」请看上一章「<a target="_blank" rel="noopener" href="https://youbingtiantian.github.io/2023/05/12/Mini-Vue-Reactive/">reactive</a>」</font></p>
 <p>在 set 中，首先使用「hasChanged」方法斤接收新旧参数，使用 Object.is() 进行判断，如果不相等，我们将新值赋给原始值，然后进行依赖的触发和「<a target="_blank" rel="noopener" href="https://youbingtiantian.github.io/2023/05/12/Mini-Vue-Reactive/">reactive</a>」中的做法差不多</p>
+<h2 id="普通-x2F-复杂数据实验"><a href="#普通-x2F-复杂数据实验" class="headerlink" title="普通&#x2F;复杂数据实验"></a>普通&#x2F;复杂数据实验</h2><p><img src="/img/Mini-Vue-Ref/htmlCode.png"></p>
+<p><video src="/img/Mini-Vue-Reactive/demonstration.mp4" width="100%" height="240" controls></video></p>
 <h2 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h2><p>最近使用 mac 不太会用，写的比较粗略潦草，贴图和文字顺序可能不太准确，凑合看吧。</p>
 <p><font color=red>其实简单来讲「ref」的做法是针对于普通数据类型和复杂数据类型的值做了两个逻辑处理，如果是普通数据类型，其实在使用者的调用过程中，是触发了 RefImpl 类的 get ，从而进行了依赖的收集触发，set 进行依赖的触发。如果是复杂数据类型则交给了「reactive &#x2F; proxy」去处理，这里可以认为 ref 对普通数据类型是没有响应性的，只是通过代码在内部手动触发了依赖，在这里声明的 get 和 set （“访问器函数”）值为 value，这也是为什么在使用 ref 时，在 js 中要使用 ‘.value’的形式去获取&#x2F;更新数据了～</font></p>
 
@@ -127,7 +129,7 @@
 
     <span class="post-tags">
       <i class="icon-tags"></i>
-        <a href="/tags/Vue3/">Vue3</a><a href="/tags/响应性/">响应性</a><a href="/tags/ref/">ref</a>
+        <a href="/tags/Vue3/">Vue3</a><a href="/tags/ref/">ref</a><a href="/tags/响应性/">响应性</a>
     </span>
     
 
