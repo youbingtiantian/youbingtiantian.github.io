@@ -15,7 +15,7 @@
 
   
   
-  <meta name="keywords" content="Vue3,ref,响应性">
+  <meta name="keywords" content="Vue3,响应性,ref">
   
 
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -101,7 +101,7 @@
 <p><img src="/img/Mini-Vue-Ref/isObjectReactive.png"></p>
 <p><font color=red>在这里我要说明，「ref」方法，本质上对于使用者传递复杂数据类型进入时，会将其在内部调用「reactive」方法进行「proxy」代理，所以本质上来说当传入复杂数据类型时，基本等于是「reactive」帮使用者做了拦截，从而达到目的</font></p>
 <p>在下方我们定义了类的 get 和 set 方法，在 get 中我们调用了收集依赖，传入 this 本身，在其中我们进行了依赖的收集，将 dep 传入其中，如果没有 dep 则创建 dep <font>关于「activeEffect」、「trackEffects」请看上一章「<a target="_blank" rel="noopener" href="https://youbingtiantian.github.io/2023/05/12/Mini-Vue-Reactive/">reactive</a>」</font></p>
-<p>在 set 中，首先使用「hasChanged」方法斤接收新旧参数，使用 Object.is() 进行判断，如果不相等，我们将新值赋给原始值，然后进行依赖的触发和「<a target="_blank" rel="noopener" href="https://youbingtiantian.github.io/2023/05/12/Mini-Vue-Reactive/">reactive</a>」中的做法差不多</p>
+<p>在 set 中，首先使用「hasChanged」方法接收新旧参数，使用 Object.is() 进行判断，如果不相等，我们将新值赋给原始值，然后进行依赖的触发和「<a target="_blank" rel="noopener" href="https://youbingtiantian.github.io/2023/05/12/Mini-Vue-Reactive/">reactive</a>」中的做法差不多</p>
 <h2 id="普通-x2F-复杂数据实验"><a href="#普通-x2F-复杂数据实验" class="headerlink" title="普通&#x2F;复杂数据实验"></a>普通&#x2F;复杂数据实验</h2><p><img src="/img/Mini-Vue-Ref/htmlCode.png"></p>
 <p><video src="/img/Mini-Vue-Ref/demonstration.mp4" width="100%" height="240" controls></video></p>
 <p>多余的打印 ‘收集依赖’ , ‘触发依赖’ 是之前写在 effect.ts 中的</p>
@@ -130,7 +130,7 @@
 
     <span class="post-tags">
       <i class="icon-tags"></i>
-        <a href="/tags/Vue3/">Vue3</a><a href="/tags/ref/">ref</a><a href="/tags/响应性/">响应性</a>
+        <a href="/tags/Vue3/">Vue3</a><a href="/tags/响应性/">响应性</a><a href="/tags/ref/">ref</a>
     </span>
     
 
